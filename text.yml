@@ -1,0 +1,31 @@
+name: Quality Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: echo "No dependencies to install for HTML/CSS project"
+      - name: Linting HTML and CSS
+        run: |
+          # Add commands here to perform linting on your HTML and CSS files
+          # Example commands for HTML:
+          # npx htmlhint .
+          # Example commands for CSS:
+          # npx stylelint "**/*.css"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: echo "No dependencies to install for HTML/CSS project"
+      - name: Testing
+        run: echo "No tests to run for HTML/CSS project"
